@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #contenedor1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    #contenedor2{
+        display: contents;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    #contenedor3{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: end;
+    }
+    #contenedor4{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+</style>
+<body>
+    <header id="contenedor1">
+        Estilos basicos
+    </header>
+    <div id="contenedor2">
+        <nav>
+            <a href="#main" title="enlace a sección principal">Enlace a main</a>
+        </nav>
+        <main>
+            <section id ="main" alt="Elemento principal">
+                <p>Este es el elemento principal</p>
+                <article>
+                    Y cada línea es un elemnto artículo
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <aside id="contenedor3">
+        <a href="#main" title="enlace a sección principal">Enlace a main</a>
+    </aside> 
+</body>
+<footer id="contenedor4" alt="curso EOI">Curso HTML5 EOI - 2022</footer>
+</html>
