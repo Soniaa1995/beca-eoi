@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos de texto</title>
+</head>
+<body>
+    <main id="main" class="main">
+        <section>
+            <form id="formulario" name="formulario" action="#">
+                <fieldset>
+                    <legend><strong>Formulario</strong></legend>
+                    <p>
+                        <label id="etiqueta" for="nombreUsuario">Nombre de usuario</label>
+                        <input type="text" name="nombre" required> <br>
+                    </p>
+                    <p>
+                        <label id="etiqueta" for="password">Contraseña</label>
+                        <input type="password" placeholder="" required> <br>
+                    </p>
+                    <p>
+                        <label id="etiqueta" for="edad">Edad</label>
+                        <input class="campos" type="number" name="Introduce su edad" min="10" max="80" step="1" required><br>
+                    </p>
+                    <p>
+                        <label id="etiqueta" for="fecha">¿Qué genero de películas te gustan?</label>
+                        <textarea name="descripcion" autofocus></textarea><br>
+                    </p>
+                    <p>
+                        <select name="pelicula" id="Listado peliculas">
+                            <option value="Ninguno">Selecciona una categoría</option>
+                            <option value="1">Harry Potter y el prisionero de Azkaban</option>
+                            <option value="2">Los juegos del hambre: en llamas</option>
+                            <option value="3">X-MEN: primera generación</option>
+                            <option value="4">Tomb Rider</option>
+                        </select><br>
+                    </p>
+                    <p>
+                        <label id="etiqueta" for="chekbox">¿Le ha gustado este formulario?</label><br>
+                        <input type="checkbox">Sí
+                        <input type="checkbox">No
+                    </p>
+
+                    <p>
+                        <datalist id="listaTels">
+                            <option value="123123123" label="Tlf1">
+                            <option value="456456456" label="Tlf2">
+                        </datalist>
+                        <label>Teléfono : <input type="tel" name="telefono" list="listTels"> </label>
+                        <meter value="80" min="0" max="100" low="40" hight="80" optimum="100"></meter><br>
+                    </p>
+
+                </fieldset>
+                <button type="button">Enviar</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+    </form>
+    </footer>
+</body>
+</html>
