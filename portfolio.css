@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    margin: 0px;
+}
+
+#Portfolio{
+    background-color: white;
+    justify-content: center;
+}
+
+main h3{
+    text-align: center;
+    margin-left: 500px;
+}
+
+#casa{
+    flex-direction: row left;
+    margin-left: 500px;
+    height: 200px;
+    width: 250px;
+}
+
+#circo{
+    flex-direction: row;
+    margin-left: 10px;
+    height: 200px;
+    width: 250px;
+}
+
+#barco{
+    flex-direction: row right;
+    margin-left: 10px;
+    height: 200px;
+    width: 250px;
+}
