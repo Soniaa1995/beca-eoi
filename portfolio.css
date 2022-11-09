@@ -7,6 +7,10 @@ body{
     background-color: white;
     justify-content: center;
 }
+#Portfolio img{
+    height: 200px;
+    width: 250px;
+}
 
 main h3{
     text-align: center;
@@ -16,20 +20,15 @@ main h3{
 #casa{
     flex-direction: row left;
     margin-left: 500px;
-    height: 200px;
-    width: 250px;
+
 }
 
 #circo{
     flex-direction: row;
     margin-left: 10px;
-    height: 200px;
-    width: 250px;
 }
 
 #barco{
     flex-direction: row right;
     margin-left: 10px;
-    height: 200px;
-    width: 250px;
 }
