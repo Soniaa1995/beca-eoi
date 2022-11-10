@@ -1,0 +1,12 @@
+p{
+    display: block;
+}
+
+.impar{
+    float: left;
+    clear: both;
+}
+.par{
+    float:right;
+    clear: both;
+}
