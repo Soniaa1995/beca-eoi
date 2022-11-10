@@ -1,0 +1,29 @@
+/*a*/
+#sec1 p:nth-child(2){
+    color: red;
+}
+/*b*/
+#sec1 p:first-child{
+    color: red;
+}
+/*c*/
+#sec1 p:last-child{
+    color: red;
+}
+/*d*/
+#sec1 p:nth-child(even){
+    color: red;
+}
+
+#sec1 p:nth-child(odd){
+    color: yellow;
+}
+/*e*/
+main:only-child{
+    color: red;
+}
+/*f*/
+#sec1 p:first-of-type{
+    color: red;
+}
+
