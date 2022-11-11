@@ -1,0 +1,29 @@
+$type: monster;
+p {
+@if $type == ocean {
+color: blue;
+
+} @else if $type == matador {
+
+color: red;
+
+} @else if $type == monster {
+
+color: green;
+
+} @else {
+
+color: black;}}
+
+$radius: 10px;
+ 
+@mixin rounded($vert, $horz) {
+    border-#{$vert}-#{$horz}-radius: $radius;
+    -moz-border-radius-#{$vert}#{$horz}: $radius;
+    -webkit-border-#{$vert}-#{$horz}-radius: $radius;
+    }
+
+nav {@include rounded(top, left);}
+
+
+
