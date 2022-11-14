@@ -1,0 +1,12 @@
+console.info("mensaje de info");
+console.warn("mensaje de warning");
+console.error("mensaje de error");
+console.log("mensaje de log");
+console.time();
+console.timeEnd();
+var numero1= 2;
+var numero2= 34;
+console.log("suma de " + numero1 +" y " + numero2+ " : " +(numero1 + numero2));
+console.log("resta de " + numero1 +" y " + numero2+ " : " +(numero1 - numero2));
+console.log ({});
+console.log ([{},{},{}]);
