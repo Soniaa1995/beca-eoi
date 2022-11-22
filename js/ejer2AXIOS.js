@@ -1,15 +1,14 @@
-const request = new Request('https://j4jjw.mocklab.io/users');
-
+const request = Request('https://j4jjw.mocklab.io/users');
 const URL = request.url;
 const method = request.method;
 const credentials = request.credentials;
 
 let datos;
-fetch(request)
-.then(response => response.json())
-.then(data => {
-    datos = data.arrayUsuarios;
+axios.get(request)
+    .then((data) => {
+        datos = data.data.arrayUsuarios;
 
+    
     let tabla = `<table id="dataTable">
         <thead>
         <tr>
@@ -38,10 +37,4 @@ tabla+=filas+finTabla;
 document.getElementById("resultados").innerHTML = tabla;
 
 })
-
-
-
-
-
-
-
+    
