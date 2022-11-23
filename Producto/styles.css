@@ -1,18 +1,27 @@
-table, th, td {
-    border: 1px solid;
-  }
 
-#dataTable{
-    
-    background-color: rgb(218, 218, 218);
-}
-h1{
-    width:70%; 
-    margin-left:15%; 
-    margin-right:15%;
-}
 #resultados{
-    width:70%; 
-    margin-left:15%; 
-    margin-right:15%;
+    margin-top: 20px;
+}
+
+#buscador{
+    margin-left: 5px;
+    margin-right: 8px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+a:hover{
+    color: #0dcaf0;
+}
+table{
+    background-color: azure;
+
+}
+body{
+    background-color: aliceblue
+}
+.botones{
+    margin-top: 20px;
 }

@@ -2,20 +2,23 @@
 <html>
     <head>
         <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
         
     </head>
     <body>
         <script src="bootstrap.bundle.min.js"></script>
         <main id="main" class="main">
-            <div class="row">
-                <div class="col-2"></div>
-                <h1 class="col-10">PRODUCTOS</h1>
-                <div class="col-2"></div>
-                <p class="col-2">ID: <input id="buscador">  <button onclick="buscar()">Buscar</button></p>
-                <div class="col-1"><button onclick="crear()">Crear Producto</button></div>
-               
+            <div class="container">
+                <div class="row">
+                    <h1 class="text-center">PRODUCTOS</h1>
+                </div>
+                <div class="row">
+                    <div class="col-4">ID:<input id="buscador"><button class="btn btn-outline-info" onclick="buscar()">Buscar</button></div>
+                    <div class="col-6"></div>
+                    <div class="col-2"><button class="float-end btn btn-outline-info" onclick="crear()">Crear Producto</button></div>
+                </div>
             </div>
-            
+
             <div id="resultados">
     
             </div>

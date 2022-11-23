@@ -14,27 +14,42 @@ function mostrar(){
     
     axios.get(urlUsers,{headers})
     .then((respuestaProductos) => {
-         let productos=respuestaProductos.data;
-         let tabla=`
-         <div class="container">
-         <div class="row m-10">
-                        <div class="col-4" style="background-color: Grey;">Nombre</div>
-                        <div class="col-4" style="background-color: Grey;">Description</div>
-                        <div class="col-4" style="background-color: Grey;">Codigo</div> `;
+        let productos=respuestaProductos.data;
+        let tabla =`
+        <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+        <table class="table table-bordered">
+            <thead>
+                <tr class="table-info">
+                    <th>Nombre</th>
+                    <th>Description</th>
+                    <th>Codigo</th>
+                </tr>
+            <thead>
+            <tbody>`;
+                
+        let finTabla =
+            `</tbody>
+        </table>
+        <div class="col-2"></div>
+        </div>
+        `;
+
         
-         let finTabla=`</div>`;
-        
-         let filastablas=``;
-         productos.forEach(producto => {
+        let filastablas=``;
+        productos.forEach(producto => {
             /*console.log("ID: "+producto.id+" Name: "+producto.name+" Descrpt: "+producto.description+" Code: "+producto.code);*/
             filastablas+=`
-                    <div class="col-4"  style="background-color: Lightgrey;"><a href="producto.html?id=${producto.id}">${producto.name}</a></div>
-                    <div class="col-4" style="background-color: Lightgrey;">${producto.description}</div>
-                    <div class="col-4" style="background-color: Lightgrey;">${producto.code}</div>`;
-         });
-         tabla += filastablas+finTabla;
-         document.getElementById("resultados").innerHTML=tabla;
+                <tr>
+                    <td><a href="producto.html?id=${producto.id}">${producto.name}</a></td>
+                    <td>${producto.description}</td>
+                    <td>${producto.code}</td>
+                </tr>`;
         });
+        tabla += filastablas+finTabla;
+        document.getElementById("resultados").innerHTML=tabla;
+    });
 }
 
 function mostrarID(id){
@@ -51,31 +66,50 @@ function mostrarID(id){
                 let productos=respuestaProductos.data;
                 let tabla=`
                 <div class="container">
-                <div class="row m-10">
-                                <div class="col-4" style="background-color: Grey;">Nombre</div>
-                                <div class="col-4" style="background-color: Grey;">Description</div>
-                                <div class="col-4" style="background-color: Grey;">Codigo</div> `;
-                
-                let finTabla=`</div> </div>`;
+                <div class="row">
+                    <div class="col-2"></div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="table-info">
+                            <th>Nombre</th>
+                            <th>Description</th>
+                            <th>Codigo</th>
+                        </tr>
+                    <thead>
+                    <tbody>`;
+                        
+                let finTabla =
+                    `</tbody>
+                </table>
+                <div class="col-2"></div>
+                </div>
+                `;
                 
                 let filastablas=``;
                     /*console.log("ID: "+producto.id+" Name: "+producto.name+" Descrpt: "+producto.description+" Code: "+producto.code);*/
                     filastablas+=`
-                            <div class="col-4" style="background-color: Lightgrey;">${productos.name}</div>
-                            <div class="col-4" style="background-color: Lightgrey;">${productos.description}</div>
-                            <div class="col-4" style="background-color: Lightgrey;">${productos.code}</div>`;
+                    <tr>
+                        <td>${productos.name}</td>
+                        <td>${productos.description}</td>
+                        <td>${productos.code}</td
+                    </tr>`;
                 
                 tabla += filastablas+finTabla;
                 document.getElementById("resultados").innerHTML=tabla;
                 }).catch((error) =>{
                     let tabla=`
-                            <div class="container">
-                            <div class="row m-10">
-                                <div class="col-4" style="background-color: Grey;">Nombre</div>
-                                <div class="col-4" style="background-color: Grey;">Description</div>
-                                <div class="col-4" style="background-color: Grey;">Codigo</div> 
-                            </div>
-                            </div>`;
+                    <div class="container">
+                    <div class="row">
+                        <div class="col-2"></div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="table-info">
+                                <th>Nombre</th>
+                                <th>Description</th>
+                                <th>Codigo</th>
+                            </tr>
+                        <thead>
+                        <tbody>`;
 
                     document.getElementById("resultados").innerHTML=tabla;
                     window.alert("No se ha encontado");

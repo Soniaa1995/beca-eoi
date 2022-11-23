@@ -2,21 +2,23 @@
 <html>
 <head>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <script src="bootstrap.bundle.min.js"></script>
     <main id="main" class="main">
-        <div class="row">
-            <div class="col-2"></div>
-            <h1 class="col-10">PRODUCTOS</h1>
-        </div>
+        <div class="container">
+            <div class="row">
+                <h1 class="text-center">PRODUCTOS</h1>
+            </div>
         
-        <p class="col-2">Nombre: <input id="nuevoNombre">
-        <p class="col-2">Description: <input id="nuevoDescription">
-        <p class="col-2">Codigo: <input id="nuevoCodigo"><br>  
-        <input onclick="crearProducto()" type="button" value="Crear Producto"/>  
-        <input onclick="volverAtras()" type="button" value="Volver atras"/>  
-
+        <div class="col-2"><strong>Nombre:</strong><input id="nuevoNombre"></div>
+        <div class="col-2"><strong>Descripción:</strong><input id="nuevoDescription"></div>
+        <div class="col-2"><strong>Código</strong><input id="nuevoCodigo"></div>
+            <div class="botones">
+                <input class="btn btn-outline-info" onclick="crearProducto()" type="button" value="Crear Producto"/>  
+                <input class="btn btn-outline-info" onclick="volverAtras()" type="button" value="Volver atras"/>  
+            </div>
 
         <div id="resultados">
         </div>
